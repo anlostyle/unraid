@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>qbittorrent-pt</Name>
+  <Repository>linuxserver/qbittorrent</Repository>
+  <Registry>https://hub.docker.com/r/linuxserver/qbittorrent/</Registry>
+  <Network>br0</Network>
+  <MyIP>192.168.2.19</MyIP>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/59191-support-linuxserverio-qbittorrent/</Support>
+  <Project>https://www.qbittorrent.org</Project>
+  <Overview>The qBittorrent project aims to provide an open-source software alternative to &#xB5;Torrent. qBittorrent is based on the Qt toolkit and libtorrent-rasterbar library.</Overview>
+  <Category>Downloaders:</Category>
+  <WebUI>http://[IP]:[PORT:8999]/</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/qbittorrent.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/qbittorrent-icon.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1634566462</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description>The qBittorrent project aims to provide an open-source software alternative to &#xB5;Torrent. qBittorrent is based on the Qt toolkit and libtorrent-rasterbar library.</Description>
+  <Networking>
+    <Mode>br0</Mode>
+    <Publish>
+      <Port>
+        <HostPort>51000</HostPort>
+        <ContainerPort>6881</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>51000</HostPort>
+        <ContainerPort>6881</ContainerPort>
+        <Protocol>udp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>8080</HostPort>
+        <ContainerPort>8080</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/pt-player-help/</HostDir>
+      <ContainerDir>/downloads</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/qbittorrent-pt</HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>99</Value>
+      <Name>PUID</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>100</Value>
+      <Name>PGID</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Labels/>
+  <Config Name="Host Port 1" Target="6881" Default="6881" Mode="tcp" Description="Container Port: 6881" Type="Port" Display="always" Required="true" Mask="false">51000</Config>
+  <Config Name="Host Port 2" Target="6881" Default="6881" Mode="udp" Description="Container Port: 6881" Type="Port" Display="always" Required="true" Mask="false">51000</Config>
+  <Config Name="Host Port 3" Target="8080" Default="8080" Mode="tcp" Description="Container Port: 8080" Type="Port" Display="always" Required="true" Mask="false">8080</Config>
+  <Config Name="Host Path 2" Target="/downloads" Default="" Mode="rw" Description="Container Path: /downloads" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/pt-player-help/</Config>
+  <Config Name="Key 1" Target="PUID" Default="99" Mode="" Description="Container Variable: PUID" Type="Variable" Display="always" Required="false" Mask="false">99</Config>
+  <Config Name="Key 2" Target="PGID" Default="100" Mode="" Description="Container Variable: PGID" Type="Variable" Display="always" Required="false" Mask="false">100</Config>
+  <Config Name="AppData Config Path" Target="/config" Default="/mnt/user/appdata/qbittorrent" Mode="rw" Description="Container Path: /config" Type="Path" Display="advanced-hide" Required="true" Mask="false">/mnt/user/appdata/qbittorrent-pt</Config>
+</Container>

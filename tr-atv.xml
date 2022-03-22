@@ -1,0 +1,100 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>tr-atv</Name>
+  <Repository>chisbread/transmission</Repository>
+  <Registry>https://hub.docker.com/r/linuxserver/transmission/</Registry>
+  <Network>br0</Network>
+  <MyIP>192.168.2.123</MyIP>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/42352-support-linuxserverio-transmission/</Support>
+  <Project>http://www.transmissionbt.com/</Project>
+  <Overview>Transmission is designed for easy, powerful use. Transmission has the features you want from a BitTorrent client: encryption, a web interface, peer exchange, magnet links, DHT, &#xB5;TP, UPnP and NAT-PMP port forwarding, webseed support, watch directories, tracker editing, global and per-torrent speed limits, and more.</Overview>
+  <Category>Downloaders:</Category>
+  <WebUI>http://[IP]:[PORT:9091]/</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/transmission.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/transmission-icon.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1638500627</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description>Transmission is designed for easy, powerful use. Transmission has the features you want from a BitTorrent client: encryption, a web interface, peer exchange, magnet links, DHT, &#xB5;TP, UPnP and NAT-PMP port forwarding, webseed support, watch directories, tracker editing, global and per-torrent speed limits, and more.</Description>
+  <Networking>
+    <Mode>br0</Mode>
+    <Publish>
+      <Port>
+        <HostPort>9091</HostPort>
+        <ContainerPort>9091</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>51413</HostPort>
+        <ContainerPort>51413</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/disk4/Downloads/</HostDir>
+      <ContainerDir>/downloads</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/transmission/watch/</HostDir>
+      <ContainerDir>/watch</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/disk4/Downloads/atv/</HostDir>
+      <ContainerDir>/disk4</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/tr-atv/</HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>1000</Value>
+      <Name>PUID</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>1000</Value>
+      <Name>PGID</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>/watch/web</Value>
+      <Name>TRANSMISSION_WEB_HOME</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>adminadmin</Value>
+      <Name>PASS</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>admin</Value>
+      <Name>USER</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Labels/>
+  <Config Name="Host Port 1" Target="9091" Default="9091" Mode="tcp" Description="Container Port: 9091" Type="Port" Display="always" Required="true" Mask="false">9091</Config>
+  <Config Name="Host Port 2" Target="51413" Default="51413" Mode="tcp" Description="Container Port: 51413" Type="Port" Display="always" Required="true" Mask="false">51413</Config>
+  <Config Name="Host Path 2" Target="/downloads" Default="" Mode="rw" Description="Container Path: /downloads" Type="Path" Display="always" Required="true" Mask="false">/mnt/disk4/Downloads/</Config>
+  <Config Name="Host Path 3" Target="/watch" Default="" Mode="rw" Description="Container Path: /watch" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/transmission/watch/</Config>
+  <Config Name="Key 1" Target="PUID" Default="99" Mode="" Description="Container Variable: PUID" Type="Variable" Display="always" Required="false" Mask="false">1000</Config>
+  <Config Name="Key 2" Target="PGID" Default="100" Mode="" Description="Container Variable: PGID" Type="Variable" Display="always" Required="false" Mask="false">1000</Config>
+  <Config Name="webui" Target="TRANSMISSION_WEB_HOME" Default="" Mode="" Description="Container Variable: TRANSMISSION_WEB_HOME" Type="Variable" Display="always" Required="false" Mask="false">/watch/web</Config>
+  <Config Name="password" Target="PASS" Default="" Mode="" Description="Container Variable: PASS" Type="Variable" Display="always" Required="false" Mask="false">adminadmin</Config>
+  <Config Name="user" Target="USER" Default="" Mode="" Description="Container Variable: USER" Type="Variable" Display="always" Required="false" Mask="false">admin</Config>
+  <Config Name="/disk4" Target="/disk4" Default="" Mode="rw" Description="&#x5BB9;&#x5668; Path: /disk4" Type="Path" Display="always" Required="false" Mask="false">/mnt/disk4/Downloads/atv/</Config>
+  <Config Name="AppData Config Path" Target="/config" Default="/mnt/user/appdata/transmission" Mode="rw" Description="Container Path: /config" Type="Path" Display="advanced-hide" Required="true" Mask="false">/mnt/user/appdata/tr-atv/</Config>
+</Container>

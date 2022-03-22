@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>webdav</Name>
+  <Repository>ugeek/webdav:i386</Repository>
+  <Registry/>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support/>
+  <Project/>
+  <Overview/>
+  <Category/>
+  <WebUI>http://[IP]:[PORT:1809]</WebUI>
+  <TemplateURL/>
+  <Icon>https://mmbiz.qpic.cn/mmbiz_png/5xFLia3A3km76PCabSNGFZLKd4PQicdemwuLWPX9S8NkN8AdH4pYT3HicCXw0hWic4DCwXia1YdyO6t1gfOPIhb2ZCQ/0?wx_fmt=png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1646582923</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description/>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>1809</HostPort>
+        <ContainerPort>80</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/</HostDir>
+      <ContainerDir>/media</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>admin</Value>
+      <Name>USERNAME</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>adminadmin</Value>
+      <Name>PASSWORD</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>1000</Value>
+      <Name>GID</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>1000</Value>
+      <Name>UDI</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Labels/>
+  <Config Name="USERNAME" Target="USERNAME" Default="" Mode="" Description="&#x5BB9;&#x5668; Variable: USERNAME" Type="Variable" Display="always" Required="false" Mask="false">admin</Config>
+  <Config Name="PASSWORD" Target="PASSWORD" Default="" Mode="" Description="&#x5BB9;&#x5668; Variable: PASSWORD" Type="Variable" Display="always" Required="false" Mask="false">adminadmin</Config>
+  <Config Name="Host Key 3" Target="GID" Default="" Mode="" Description="&#x5BB9;&#x5668; Variable: GID" Type="Variable" Display="always" Required="false" Mask="false">1000</Config>
+  <Config Name="UDI" Target="UDI" Default="" Mode="" Description="&#x5BB9;&#x5668; Variable: UDI" Type="Variable" Display="always" Required="false" Mask="false">1000</Config>
+  <Config Name="Host Path 1" Target="/media" Default="" Mode="rw" Description="&#x5BB9;&#x5668; Path: /media" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/</Config>
+  <Config Name="Host Port 1" Target="80" Default="" Mode="tcp" Description="80" Type="Port" Display="always" Required="false" Mask="false">1809</Config>
+</Container>

@@ -1,0 +1,102 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>ComiXed</Name>
+  <Repository>comixed/comixed:latest</Repository>
+  <Registry>https://hub.docker.com/r/comixed/comixed</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/115710-comixed-docker-support-thread/</Support>
+  <Project>https://github.com/comixed/comixed</Project>
+  <Overview>ComiXed is a digital comic library management tool.&#xD;
+Its underlying goal is to enable users to manage the contents of their library and to access that library from any device that supports OPDS.&#xD;
+(Exert from comixed Wiki. Accessed 08.11.2021 (https://github.com/comixed/comixed/wiki))&#xD;
+&#xD;
+Read this!&#xD;
+Readme:&#xD;
+https://github.com/comixed/comixed/blob/master/README.md&#xD;
+Quickstart:&#xD;
+https://github.com/comixed/comixed/blob/master/QUICKSTART.md&#xD;
+&#xD;
+After container start wait a bit, as it has a bit of Overhead.&#xD;
+Default accounts are to be found in the Quickstart entry.&#xD;
+The Docker is currently a bit buggy. Be sure to update the root library location to /library and add an ComicVine api key under Administration -&amp;gt; Configuration before adding any comics.&#xD;
+&#xD;
+Access to opds:&#xD;
+(ServerIP):(DockerPort)/opds&#xD;
+</Overview>
+  <Category>MediaServer:Other</Category>
+  <WebUI>http://[IP]:[PORT:7171]</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/C3004/Unraid-Templates-C3004/master/Comixed-Docker.xml</TemplateURL>
+  <Icon/>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1642254769</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description>ComiXed is a digital comic library management tool.&#xD;
+Its underlying goal is to enable users to manage the contents of their library and to access that library from any device that supports OPDS.&#xD;
+(Exert from comixed Wiki. Accessed 08.11.2021 (https://github.com/comixed/comixed/wiki))&#xD;
+&#xD;
+Read this!&#xD;
+Readme:&#xD;
+https://github.com/comixed/comixed/blob/master/README.md&#xD;
+Quickstart:&#xD;
+https://github.com/comixed/comixed/blob/master/QUICKSTART.md&#xD;
+&#xD;
+After container start wait a bit, as it has a bit of Overhead.&#xD;
+Default accounts are to be found in the Quickstart entry.&#xD;
+The Docker is currently a bit buggy. Be sure to update the root library location to /library and add an ComicVine api key under Administration -&amp;gt; Configuration before adding any comics.&#xD;
+&#xD;
+Access to opds:&#xD;
+(ServerIP):(DockerPort)/opds&#xD;
+</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>7171</HostPort>
+        <ContainerPort>7171</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/Downloads/&#x6F2B;&#x753B;/</HostDir>
+      <ContainerDir>/library</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/comixed/database</HostDir>
+      <ContainerDir>/root/.comixed</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/comixed/incoming</HostDir>
+      <ContainerDir>/incoming</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>100</Value>
+      <Name>PGID</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>99</Value>
+      <Name>PUID</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Labels/>
+  <Config Name="WebUI" Target="7171" Default="7171" Mode="tcp" Description="Port for WebUI" Type="Port" Display="always" Required="false" Mask="false">7171</Config>
+  <Config Name="Library" Target="/library" Default="/mnt/user/appdata/comixed/library" Mode="rw" Description="This is where your books will be stored." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/Downloads/&#x6F2B;&#x753B;/</Config>
+  <Config Name="Database" Target="/root/.comixed" Default="/mnt/user/appdata/comixed/database" Mode="rw" Description="Here the Database which Comixed uses will be saved." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/comixed/database</Config>
+  <Config Name="Incoming" Target="/incoming" Default="/mnt/user/appdata/comixed/incoming" Mode="rw" Description="Put files here to import them to the library." Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/comixed/incoming</Config>
+  <Config Name="PGID" Target="PGID" Default="100" Mode="" Description="Container Variable: PGID" Type="Variable" Display="advanced" Required="false" Mask="false">100</Config>
+  <Config Name="PUID" Target="PUID" Default="99" Mode="" Description="Container Variable: PUID" Type="Variable" Display="advanced" Required="false" Mask="false">99</Config>
+</Container>

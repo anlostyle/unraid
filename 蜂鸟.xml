@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>&#x8702;&#x9E1F;</Name>
+  <Repository>scjtqs/xunlei-fastdick</Repository>
+  <Registry/>
+  <Network>host</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support/>
+  <Project/>
+  <Overview/>
+  <Category/>
+  <WebUI/>
+  <TemplateURL/>
+  <Icon/>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1629643305</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description/>
+  <Networking>
+    <Mode>host</Mode>
+    <Publish/>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/xunlei</HostDir>
+      <ContainerDir>/flier/xunlei-fastdick</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>anlostyle</Value>
+      <Name>XUNLEI_UID</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>3.141592654</Value>
+      <Name>XUNLEI_PASSWD</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Labels/>
+  <Config Name="Host Path 1" Target="/flier/xunlei-fastdick" Default="" Mode="rw" Description="Container Path: /flier/xunlei-fastdick" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/xunlei</Config>
+  <Config Name="use" Target="XUNLEI_UID" Default="" Mode="" Description="Container Variable: XUNLEI_UID" Type="Variable" Display="always" Required="false" Mask="false">anlostyle</Config>
+  <Config Name="pass" Target="XUNLEI_PASSWD" Default="" Mode="" Description="Container Variable: XUNLEI_PASSWD" Type="Variable" Display="always" Required="false" Mask="false">3.141592654</Config>
+</Container>

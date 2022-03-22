@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>PtManagePlugin</Name>
+  <Repository>zht39635371/pt-manage-plugin:latest</Repository>
+  <Registry/>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support/>
+  <Project/>
+  <Overview/>
+  <Category/>
+  <WebUI>http://[IP]:[PORT:7001]</WebUI>
+  <TemplateURL/>
+  <Icon>https://upload.cc/i1/2022/01/29/7fsY9k.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1643466716</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description/>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>7001</HostPort>
+        <ContainerPort>7001</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/PtManagePlugin/db</HostDir>
+      <ContainerDir>/PtManagePlugin/db</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment/>
+  <Labels/>
+  <Config Name="Host Port 1" Target="7001" Default="" Mode="tcp" Description="&#x5BB9;&#x5668; Port: 7001" Type="Port" Display="always" Required="false" Mask="false">7001</Config>
+  <Config Name="Host Path 1" Target="/PtManagePlugin/db" Default="" Mode="rw" Description="&#x5BB9;&#x5668; Path: /PtManagePlugin/db" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/PtManagePlugin/db</Config>
+</Container>

@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>xunlei&#x5FEB;&#x9E1F;</Name>
+  <Repository>fffonion/Xunlei-Fastdick</Repository>
+  <Registry/>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support/>
+  <Project/>
+  <Overview/>
+  <Category/>
+  <WebUI/>
+  <TemplateURL/>
+  <Icon/>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1628695963</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description/>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish/>
+  </Networking>
+  <Data/>
+  <Environment>
+    <Variable>
+      <Value>anlostyle</Value>
+      <Name>XUNLEI_UID</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>3.141592654</Value>
+      <Name>XUNLEI_PASSWD</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Labels/>
+  <Config Name="&#x5E10;&#x53F7;" Target="XUNLEI_UID" Default="" Mode="" Description="Container Variable: XUNLEI_UID" Type="Variable" Display="always" Required="false" Mask="false">anlostyle</Config>
+  <Config Name="&#x5BC6;&#x7801;" Target="XUNLEI_PASSWD" Default="" Mode="" Description="Container Variable: XUNLEI_PASSWD" Type="Variable" Display="always" Required="false" Mask="false">3.141592654</Config>
+</Container>

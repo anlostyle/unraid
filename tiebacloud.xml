@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>tiebacloud</Name>
+  <Repository>maskbugzero/tieba-cloud-sign</Repository>
+  <Registry/>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support/>
+  <Project/>
+  <Overview/>
+  <Category/>
+  <WebUI>http://[IP]:[PORT:7800]</WebUI>
+  <TemplateURL/>
+  <Icon>https://upload.cc/i1/2022/03/02/DoAKJb.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1647931535</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description/>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>7800</HostPort>
+        <ContainerPort>8080</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/tiebacloud</HostDir>
+      <ContainerDir>/srv/www/plugins</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>192.168.2.112:3306</Value>
+      <Name>DB_HOST</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>root</Value>
+      <Name>DB_USER</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>MYSQL_ROOT_PASSWORD</Value>
+      <Name>DB_PASSWD</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>tiebacloud</Value>
+      <Name>DB_NAME</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>false</Value>
+      <Name>CSRF</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Labels/>
+  <Config Name="Host Key 1" Target="DB_HOST" Default="" Mode="" Description="Container Variable: DB_HOST" Type="Variable" Display="always" Required="false" Mask="false">192.168.2.112:3306</Config>
+  <Config Name="Host Key 2" Target="DB_USER" Default="" Mode="" Description="Container Variable: DB_USER" Type="Variable" Display="always" Required="false" Mask="false">root</Config>
+  <Config Name="Host Key 3" Target="DB_PASSWD" Default="" Mode="" Description="Container Variable: DB_PASSWD" Type="Variable" Display="always" Required="false" Mask="false">MYSQL_ROOT_PASSWORD</Config>
+  <Config Name="Host Key 4" Target="DB_NAME" Default="" Mode="" Description="Container Variable: DB_NAME" Type="Variable" Display="always" Required="false" Mask="false">tiebacloud</Config>
+  <Config Name="Host Key 5" Target="CSRF" Default="" Mode="" Description="Container Variable: CSRF" Type="Variable" Display="always" Required="false" Mask="false">false</Config>
+  <Config Name="Host Port 1" Target="8080" Default="" Mode="tcp" Description="Container Port: 8080" Type="Port" Display="always" Required="false" Mask="false">7800</Config>
+  <Config Name="Host Path 1" Target="/srv/www/plugins" Default="" Mode="rw" Description="&#x5BB9;&#x5668; Path: /srv/www/plugins" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/tiebacloud</Config>
+</Container>

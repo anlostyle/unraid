@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>nextcloud</Name>
+  <Repository>lscr.io/linuxserver/nextcloud</Repository>
+  <Registry>https://github.com/orgs/linuxserver/packages/container/package/nextcloud</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/linuxserver/docker-nextcloud/issues/new/choose</Support>
+  <Project>https://nextcloud.com/</Project>
+  <Overview>Nextcloud(https://nextcloud.com/) gives you access to all your files wherever you are.&#xD;
+&#xD;
+Where are your photos and documents? With Nextcloud you pick a server of your choice, at home, in a data center or at a provider. And that is where your files will be. Nextcloud runs on that server, protecting your data and giving you access from your desktop or mobile devices. Through Nextcloud you also access, sync and share your existing data on that FTP drive at the office, a Dropbox or a NAS you have at home.</Overview>
+  <Category/>
+  <WebUI>https://[IP]:[PORT:1443]</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/linuxserver/templates/main/unraid/nextcloud.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/nextcloud-logo.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1636387030</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description>Nextcloud(https://nextcloud.com/) gives you access to all your files wherever you are.&#xD;
+&#xD;
+Where are your photos and documents? With Nextcloud you pick a server of your choice, at home, in a data center or at a provider. And that is where your files will be. Nextcloud runs on that server, protecting your data and giving you access from your desktop or mobile devices. Through Nextcloud you also access, sync and share your existing data on that FTP drive at the office, a Dropbox or a NAS you have at home.</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>1443</HostPort>
+        <ContainerPort>443</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/nextcloud</HostDir>
+      <ContainerDir>/data</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/nextcloud</HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>99</Value>
+      <Name>PUID</Name>
+      <Mode>{3}</Mode>
+    </Variable>
+    <Variable>
+      <Value>100</Value>
+      <Name>PGID</Name>
+      <Mode>{3}</Mode>
+    </Variable>
+    <Variable>
+      <Value>022</Value>
+      <Name>UMASK</Name>
+      <Mode>{3}</Mode>
+    </Variable>
+  </Environment>
+  <Labels/>
+  <Config Name="WebUI" Target="443" Default="443" Mode="tcp" Description="WebUI" Type="Port" Display="always" Required="true" Mask="false">1443</Config>
+  <Config Name="Path: /data" Target="/data" Default="" Mode="rw" Description="Your personal data." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/nextcloud</Config>
+  <Config Name="Appdata" Target="/config" Default="/mnt/user/appdata/nextcloud" Mode="rw" Description="Nextcloud configs." Type="Path" Display="advanced" Required="true" Mask="false">/mnt/user/appdata/nextcloud</Config>
+  <Config Name="PUID" Target="PUID" Default="99" Mode="{3}" Description="Container Variable: PUID" Type="Variable" Display="advanced" Required="true" Mask="false">99</Config>
+  <Config Name="PGID" Target="PGID" Default="100" Mode="{3}" Description="Container Variable: PGID" Type="Variable" Display="advanced" Required="true" Mask="false">100</Config>
+  <Config Name="UMASK" Target="UMASK" Default="022" Mode="{3}" Description="Container Variable: UMASK" Type="Variable" Display="advanced" Required="false" Mask="false">022</Config>
+</Container>

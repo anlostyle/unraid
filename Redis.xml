@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Redis</Name>
+  <Repository>redis</Repository>
+  <Registry>https://registry.hub.docker.com/_/redis/</Registry>
+  <Network>host</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://lime-technology.com/forums/topic/69490-support-jj9987-redis/</Support>
+  <Project>https://redis.io/</Project>
+  <Overview>&#xD;
+    Redis is an open source (BSD licensed), in-memory data structure store, used as a database, cache and message broker. Based on official Redis Docker image.&#xD;
+  </Overview>
+  <Category>Network:Management Productivity: Tools:Utilities</Category>
+  <WebUI/>
+  <TemplateURL>https://raw.githubusercontent.com/juusujanar/unraid-templates/master/Redis.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/juusujanar/unraid-templates/master/img/Redis-logo.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1638702922</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description>&#xD;
+    Redis is an open source (BSD licensed), in-memory data structure store, used as a database, cache and message broker. Based on official Redis Docker image.&#xD;
+  </Description>
+  <Networking>
+    <Mode>host</Mode>
+    <Publish>
+      <Port>
+        <HostPort>6379</HostPort>
+        <ContainerPort>6379</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data/>
+  <Environment/>
+  <Labels/>
+  <Config Name="Redis Port" Target="6379" Default="6379" Mode="tcp" Description="This is Redis default connection port." Type="Port" Display="always-hide" Required="true" Mask="{8}">6379</Config>
+</Container>

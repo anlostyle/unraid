@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>bilibili-helper</Name>
+  <Repository>superng6/bilibili-helper</Repository>
+  <Registry/>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support/>
+  <Project/>
+  <Overview/>
+  <Category/>
+  <WebUI/>
+  <TemplateURL/>
+  <Icon>https://mmbiz.qpic.cn/mmbiz_png/5xFLia3A3km4KiceicmXtLicQTcnIgqKlWyh7MeQe4b9Ceh3dIiblm3P7Uwx6jfibpJn6kmN0cMDphIhamIZyc9zRzdw/0?wx_fmt=png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1636303337</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description/>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish/>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/bilibili-helper</HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>1000</Value>
+      <Name> PUID</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>100</Value>
+      <Name> PGID</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>Asia/Shanghai</Value>
+      <Name>TZ</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>true</Value>
+      <Name>CRON</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Labels/>
+  <Config Name="Host Key 1" Target=" PUID" Default="" Mode="" Description="Container Variable:  PUID" Type="Variable" Display="always" Required="false" Mask="false">1000</Config>
+  <Config Name="Host Key 2" Target=" PGID" Default="" Mode="" Description="Container Variable:  PGID" Type="Variable" Display="always" Required="false" Mask="false">100</Config>
+  <Config Name="Host Key 3" Target="TZ" Default="" Mode="" Description="Container Variable: TZ" Type="Variable" Display="always" Required="false" Mask="false">Asia/Shanghai</Config>
+  <Config Name="Host Key 4" Target="CRON" Default="" Mode="" Description="Container Variable: CRON" Type="Variable" Display="always" Required="false" Mask="false">true</Config>
+  <Config Name="Host Path 1" Target="/config" Default="" Mode="rw" Description="Container Path: /config" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/bilibili-helper</Config>
+</Container>

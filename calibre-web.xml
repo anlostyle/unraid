@@ -1,0 +1,86 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>calibre-web</Name>
+  <Repository>technosoft2000/calibre-web</Repository>
+  <Registry>https://github.com/orgs/linuxserver/packages/container/package/calibre-web</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/linuxserver/docker-calibre-web/issues/new/choose</Support>
+  <Project>https://github.com/janeczku/calibre-web</Project>
+  <Overview>Calibre-web(https://github.com/janeczku/calibre-web) is a web app providing a clean interface for browsing, reading and downloading eBooks using an existing Calibre database.   It is also possible to integrate google drive and edit metadata and your calibre library through the app itself.&#xD;
+&#xD;
+This software is a fork of library and licensed under the GPL v3 License.</Overview>
+  <Category/>
+  <WebUI>http://[IP]:[PORT:8083]</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/linuxserver/templates/main/unraid/calibre-web.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/calibre-web-logo.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1642058411</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description>Calibre-web(https://github.com/janeczku/calibre-web) is a web app providing a clean interface for browsing, reading and downloading eBooks using an existing Calibre database.   It is also possible to integrate google drive and edit metadata and your calibre library through the app itself.&#xD;
+&#xD;
+This software is a fork of library and licensed under the GPL v3 License.</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8083</HostPort>
+        <ContainerPort>8083</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/Downloads/&#x5C0F;&#x8BF4;/</HostDir>
+      <ContainerDir>/books</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/calibre-web</HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>true</Value>
+      <Name>USE_CONFIG_DIR</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>true</Value>
+      <Name>SET_CONTAINER_TIMEZONE</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>Europe/Vienna</Value>
+      <Name>CONTAINER_TIMEZONE</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>99</Value>
+      <Name>PUID</Name>
+      <Mode>{3}</Mode>
+    </Variable>
+    <Variable>
+      <Value>100</Value>
+      <Name>PGID</Name>
+      <Mode>{3}</Mode>
+    </Variable>
+  </Environment>
+  <Labels/>
+  <Config Name="WebUI" Target="8083" Default="8083" Mode="tcp" Description="WebUI" Type="Port" Display="always" Required="true" Mask="false">8083</Config>
+  <Config Name="Path: /books" Target="/books" Default="" Mode="rw" Description="Where your preexisting calibre database is located." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/Downloads/&#x5C0F;&#x8BF4;/</Config>
+  <Config Name="USE_CONFIG_DIR" Target="USE_CONFIG_DIR" Default="" Mode="" Description="&#x5BB9;&#x5668; Variable: USE_CONFIG_DIR" Type="Variable" Display="always" Required="false" Mask="false">true</Config>
+  <Config Name="SET_CONTAINER_TIMEZONE" Target="SET_CONTAINER_TIMEZONE" Default="" Mode="" Description="&#x5BB9;&#x5668; Variable: SET_CONTAINER_TIMEZONE" Type="Variable" Display="always" Required="false" Mask="false">true</Config>
+  <Config Name="CONTAINER_TIMEZONE" Target="CONTAINER_TIMEZONE" Default="" Mode="" Description="&#x5BB9;&#x5668; Variable: CONTAINER_TIMEZONE" Type="Variable" Display="always" Required="false" Mask="false">Europe/Vienna</Config>
+  <Config Name="Appdata" Target="/config" Default="/mnt/user/appdata/calibre-web" Mode="rw" Description="Where calibre-web stores the internal database and config." Type="Path" Display="advanced" Required="true" Mask="false">/mnt/user/appdata/calibre-web</Config>
+  <Config Name="PUID" Target="PUID" Default="99" Mode="{3}" Description="Container Variable: PUID" Type="Variable" Display="advanced" Required="true" Mask="false">99</Config>
+  <Config Name="PGID" Target="PGID" Default="100" Mode="{3}" Description="Container Variable: PGID" Type="Variable" Display="advanced" Required="true" Mask="false">100</Config>
+</Container>

@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>pt_helper-chd</Name>
+  <Repository>crazyq/pt_helper</Repository>
+  <Registry/>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support/>
+  <Project/>
+  <Overview/>
+  <Category/>
+  <WebUI>http://[IP]:[PORT:9392]/</WebUI>
+  <TemplateURL/>
+  <Icon>https://upload.cc/i1/2021/10/03/ycCL8O.jpeg</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1633227872</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description/>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>9392</HostPort>
+        <ContainerPort>8192</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/pt_helper/04/</HostDir>
+      <ContainerDir>/data</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment/>
+  <Labels/>
+  <Config Name="web&#x7AEF;&#x53E3;" Target="8192" Default="" Mode="tcp" Description="Container Port: 8192" Type="Port" Display="always" Required="false" Mask="false">9392</Config>
+  <Config Name="Host Path 1" Target="/data" Default="" Mode="rw" Description="Container Path: /data" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/pt_helper/04/</Config>
+</Container>

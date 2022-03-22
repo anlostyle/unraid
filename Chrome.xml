@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Chrome</Name>
+  <Repository>oldiy/chrome-novnc</Repository>
+  <Registry/>
+  <Network>br0</Network>
+  <MyIP>192.168.2.20</MyIP>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support/>
+  <Project/>
+  <Overview/>
+  <Category/>
+  <WebUI/>
+  <TemplateURL/>
+  <Icon>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/chrome.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1635917881</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description/>
+  <Networking>
+    <Mode>br0</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8083</HostPort>
+        <ContainerPort/>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>5900</HostPort>
+        <ContainerPort>5900</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data/>
+  <Environment/>
+  <Labels/>
+  <Config Name="Host Port 1" Target="" Default="8083" Mode="tcp" Description="8083" Type="Port" Display="always" Required="false" Mask="false">8083</Config>
+  <Config Name="Host Port 2" Target="5900" Default="5900" Mode="tcp" Description="5900" Type="Port" Display="always" Required="false" Mask="false">5900</Config>
+</Container>

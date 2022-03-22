@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>prowlarr</Name>
+  <Repository>hotio/prowlarr:testing</Repository>
+  <Registry>https://hub.docker.com/r/hotio/prowlarr</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://hotio.dev/discord</Support>
+  <Project>https://hotio.dev/containers/prowlarr</Project>
+  <Overview>Prowlarr is a indexer manager/proxy built on the popular arr .net/reactjs base stack to integrate with your various PVR apps.</Overview>
+  <Category>Downloaders: MediaApp:Other</Category>
+  <WebUI>http://[IP]:[PORT:9696]</WebUI>
+  <TemplateURL/>
+  <Icon>https://hotio.dev/webhook-avatars/prowlarr.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1639291216</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description>Prowlarr is a indexer manager/proxy built on the popular arr .net/reactjs base stack to integrate with your various PVR apps.</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>9696</HostPort>
+        <ContainerPort>9696</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/prowlarr</HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>99</Value>
+      <Name>PUID</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>100</Value>
+      <Name>PGID</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>002</Value>
+      <Name>UMASK</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Labels/>
+  <Config Name="Host Port for 9696" Target="9696" Default="9696" Mode="tcp" Description="Container Port: 9696" Type="Port" Display="always-hide" Required="true" Mask="false">9696</Config>
+  <Config Name="Host Path for /config" Target="/config" Default="/mnt/user/appdata/prowlarr" Mode="rw" Description="Container Path: /config" Type="Path" Display="always-hide" Required="true" Mask="false">/mnt/user/appdata/prowlarr</Config>
+  <Config Name="PUID" Target="PUID" Default="99" Mode="" Description="Container Variable: PUID" Type="Variable" Display="advanced-hide" Required="false" Mask="false">99</Config>
+  <Config Name="PGID" Target="PGID" Default="100" Mode="" Description="Container Variable: PGID" Type="Variable" Display="advanced-hide" Required="false" Mask="false">100</Config>
+  <Config Name="UMASK" Target="UMASK" Default="002" Mode="" Description="Container Variable: UMASK" Type="Variable" Display="advanced-hide" Required="false" Mask="false">002</Config>
+</Container>

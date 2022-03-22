@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>vertex</Name>
+  <Repository>lswl/vertex:stable</Repository>
+  <Registry/>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support/>
+  <Project/>
+  <Overview/>
+  <Category/>
+  <WebUI>http://[IP]:[PORT:3000]/</WebUI>
+  <TemplateURL/>
+  <Icon>https://upload.cc/i1/2022/03/07/SWHGm6.jpg</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1647969471</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description/>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>3000</HostPort>
+        <ContainerPort>3000</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/vertex</HostDir>
+      <ContainerDir>/vertex</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>Asia/Shanghai</Value>
+      <Name>TZ</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Labels/>
+  <Config Name="Host Path 1" Target="/vertex" Default="" Mode="rw" Description="&#x5BB9;&#x5668; Path: /vertex" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/vertex</Config>
+  <Config Name="Host Port 1" Target="3000" Default="" Mode="tcp" Description="&#x5BB9;&#x5668; Port: 3000" Type="Port" Display="always" Required="false" Mask="false">3000</Config>
+  <Config Name="Host Key 1" Target="TZ" Default="" Mode="" Description="&#x5BB9;&#x5668; Variable: TZ" Type="Variable" Display="always" Required="false" Mask="false">Asia/Shanghai</Config>
+</Container>

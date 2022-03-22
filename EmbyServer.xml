@@ -1,0 +1,95 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>EmbyServer</Name>
+  <Repository>emby/embyserver</Repository>
+  <Registry>https://registry.hub.docker.com/r/emby/embyserver/</Registry>
+  <Network>host</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://lime-technology.com/forum/index.php?topic=45444.0</Support>
+  <Project/>
+  <Overview>Emby Server is a home media server built on top of other popular open source technologies such as Service Stack, jQuery, jQuery mobile, and Mono. Bringing together movies, music, television and more in one dazzling interface.</Overview>
+  <Category>MediaServer:Video MediaServer:Music MediaServer:Photos</Category>
+  <WebUI>http://[IP]:[PORT:8096]/</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/MediaBrowser/Emby.Build/master/unraid-templates/emby/EmbyServer.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/MediaBrowser/Emby.Resources/master/images/Logos/logoicon.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset>0,2,4,6,9,11,13,15</CPUset>
+  <DateInstalled>1647786692</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description>Emby Server is a home media server built on top of other popular open source technologies such as Service Stack, jQuery, jQuery mobile, and Mono. Bringing together movies, music, television and more in one dazzling interface.</Description>
+  <Networking>
+    <Mode>host</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8096</HostPort>
+        <ContainerPort>8096</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/hlink2/</HostDir>
+      <ContainerDir>/mnt</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/4K/</HostDir>
+      <ContainerDir>/4k</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/vertex/</HostDir>
+      <ContainerDir>/vertex</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/Downloads/</HostDir>
+      <ContainerDir>/media</ContainerDir>
+      <Mode>ro</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/EmbyServer</HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>2</Value>
+      <Name>UID</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>2</Value>
+      <Name>GID</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>2</Value>
+      <Name>GIDLIST</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>CST-8</Value>
+      <Name>TZ</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Labels/>
+  <Config Name="Host Port 1" Target="8096" Default="8096" Mode="tcp" Description="n/a" Type="Port" Display="always" Required="true" Mask="false">8096</Config>
+  <Config Name="Host Path 2" Target="/mnt" Default="/mnt" Mode="rw" Description="Container Path: /mnt" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/hlink2/</Config>
+  <Config Name="Key 1" Target="UID" Default="2" Mode="" Description="Container Variable: UID" Type="Variable" Display="always" Required="false" Mask="false">2</Config>
+  <Config Name="Key 2" Target="GID" Default="2" Mode="" Description="Container Variable: GID" Type="Variable" Display="always" Required="false" Mask="false">2</Config>
+  <Config Name="Key 3" Target="GIDLIST" Default="2" Mode="" Description="Container Variable: GIDLIST" Type="Variable" Display="always" Required="false" Mask="false">2</Config>
+  <Config Name="&#x6838;&#x663E;" Target="" Default="" Mode="" Description="Container Device: " Type="Device" Display="always" Required="false" Mask="false">/dev/dri</Config>
+  <Config Name="Host Path 3" Target="/4k" Default="" Mode="rw" Description="&#x5BB9;&#x5668; Path: /4K" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/4K/</Config>
+  <Config Name="Host Path 3" Target="/vertex" Default="" Mode="rw" Description="&#x5BB9;&#x5668; Path: /vertex" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/vertex/</Config>
+  <Config Name="Host Path 4" Target="/media" Default="" Mode="ro" Description="&#x5BB9;&#x5668; Path: /media" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/Downloads/</Config>
+  <Config Name="Host Key 4" Target="TZ" Default="" Mode="" Description="&#x5BB9;&#x5668; Variable: TZ" Type="Variable" Display="always" Required="false" Mask="false">CST-8</Config>
+  <Config Name="AppData Config Path" Target="/config" Default="/mnt/user/appdata/EmbyServer" Mode="rw" Description="Container Path: /config" Type="Path" Display="advanced-hide" Required="true" Mask="false">/mnt/user/appdata/EmbyServer</Config>
+</Container>

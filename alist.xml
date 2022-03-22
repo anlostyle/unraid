@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>alist</Name>
+  <Repository>xhofe/alist:latest</Repository>
+  <Registry/>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support/>
+  <Project/>
+  <Overview/>
+  <Category/>
+  <WebUI>http://[IP]:[PORT:5244]/</WebUI>
+  <TemplateURL/>
+  <Icon>https://mmbiz.qpic.cn/mmbiz_png/5xFLia3A3km7ASsLj0rMqAdj5CSFeicKsSuUrgNs8nabmOhG2yIuWLyMjrOO9ctMHz5iad3r0XrqA3dF5aWY5k1QQ/0?wx_fmt=png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1647098605</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description/>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>5244</HostPort>
+        <ContainerPort>5244</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/alist</HostDir>
+      <ContainerDir>/opt/alist/data</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/</HostDir>
+      <ContainerDir>/webdav</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment/>
+  <Labels/>
+  <Config Name="Host Path 1" Target="/opt/alist/data" Default="" Mode="rw" Description="&#x5BB9;&#x5668; Path: /opt/alist/data" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/alist</Config>
+  <Config Name="Host Port 1" Target="5244" Default="" Mode="tcp" Description="&#x5BB9;&#x5668; Port: 5244" Type="Port" Display="always" Required="false" Mask="false">5244</Config>
+  <Config Name="Host Path 2" Target="/webdav" Default="" Mode="rw" Description="&#x5BB9;&#x5668; Path: /webdav" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/</Config>
+</Container>

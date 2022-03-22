@@ -1,0 +1,82 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>navidrome</Name>
+  <Repository>deluan/navidrome</Repository>
+  <Registry>https://hub.docker.com/r/deluan/navidrome/</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/87798-support-selfhostersnets-template-repository/</Support>
+  <Project>https://github.com/deluan/navidrome</Project>
+  <Overview>Modern Music Server and Streamer compatible with Subsonic/Airsonic</Overview>
+  <Category>MediaServer:Music</Category>
+  <WebUI>http://[IP]:[PORT:4533]/</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/navidrome.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/selfhosters/unRAID-CA-templates/master/templates/img/navidrome.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1641970372</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description>Modern Music Server and Streamer compatible with Subsonic/Airsonic</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>4533</HostPort>
+        <ContainerPort>4533</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/navidrome/</HostDir>
+      <ContainerDir>/data</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/hlink2/&#x97F3;&#x4E50;/</HostDir>
+      <ContainerDir>/music</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>1m</Value>
+      <Name>ND_SCANINTERVAL</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>info</Value>
+      <Name>ND_LOGLEVEL</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>24h</Value>
+      <Name>ND_SESSIONTIMEOUT</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>ND_BASEURL</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>200MB</Value>
+      <Name>ND_IMAGECACHESIZE</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Labels/>
+  <Config Name="WebUI" Target="4533" Default="" Mode="tcp" Description="Container Port: 4533" Type="Port" Display="always" Required="false" Mask="false">4533</Config>
+  <Config Name="Appdata" Target="/data" Default="" Mode="rw" Description="Container Path: /data" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/navidrome/</Config>
+  <Config Name="Music" Target="/music" Default="" Mode="rw" Description="Container Path: /music" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/hlink2/&#x97F3;&#x4E50;/</Config>
+  <Config Name="Scan Interval" Target="ND_SCANINTERVAL" Default="" Mode="" Description="Container Variable: ND_SCANINTERVAL" Type="Variable" Display="always" Required="false" Mask="false">1m</Config>
+  <Config Name="Log Level" Target="ND_LOGLEVEL" Default="" Mode="" Description="Container Variable: ND_LOGLEVEL" Type="Variable" Display="always" Required="false" Mask="false">info</Config>
+  <Config Name="Timeout" Target="ND_SESSIONTIMEOUT" Default="" Mode="" Description="Container Variable: ND_SESSIONTIMEOUT" Type="Variable" Display="always" Required="false" Mask="false">24h</Config>
+  <Config Name="BaseURL" Target="ND_BASEURL" Default="" Mode="" Description="Container Variable: ND_BASEURL" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Image Caching" Target="ND_IMAGECACHESIZE" Default="" Mode="" Description="Container Variable: ND_IMAGECACHESIZE" Type="Variable" Display="always" Required="false" Mask="false">200MB</Config>
+</Container>

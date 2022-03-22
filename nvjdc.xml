@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>nvjdc</Name>
+  <Repository>nolanhzy/nvjdc:1.1</Repository>
+  <Registry>https://hub.docker.com/r/nolanhzy/nvjdc/</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support/>
+  <Project/>
+  <Overview>.Net core 5 vue3&#x7684;&#x4E00;&#x6B21;&#x5C1D;&#x8BD5;&#xD;
+&#xD;
+Converted By Community Applications   Always verify this template (and values)  against the support page for the container&#xD;
+&#xD;
+https://hub.docker.com/r/nolanhzy/nvjdc/</Overview>
+  <Category/>
+  <WebUI>http://[IP]:[PORT:9999]/</WebUI>
+  <TemplateURL/>
+  <Icon>http://192.168.2.112:9999/img/logo.b1318156.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1640694107</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description>.Net core 5 vue3&#x7684;&#x4E00;&#x6B21;&#x5C1D;&#x8BD5;&#xD;
+&#xD;
+Converted By Community Applications   Always verify this template (and values)  against the support page for the container&#xD;
+&#xD;
+https://hub.docker.com/r/nolanhzy/nvjdc/</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>9999</HostPort>
+        <ContainerPort>80</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/nvjdc/</HostDir>
+      <ContainerDir>/app/Config/</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/nvjdc/.local-chromium/</HostDir>
+      <ContainerDir>/app/.local-chromium/</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment/>
+  <Labels/>
+  <Config Name="chromium" Target="/app/Config/" Default="" Mode="rw" Description="&#x5BB9;&#x5668; Path: /app/Config/" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/nvjdc/</Config>
+  <Config Name="Host Port 1" Target="80" Default="" Mode="tcp" Description="&#x5BB9;&#x5668; Port: 80" Type="Port" Display="always" Required="false" Mask="false">9999</Config>
+  <Config Name="Host Path 2" Target="/app/.local-chromium/" Default="" Mode="rw" Description="&#x5BB9;&#x5668; Path: /app/.local-chromium/" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/nvjdc/.local-chromium/</Config>
+</Container>

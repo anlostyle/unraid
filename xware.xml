@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>xware</Name>
+  <Repository>caiguai/docker-xware</Repository>
+  <Registry>https://hub.docker.com/r/caiguai/docker-xware</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support/>
+  <Project/>
+  <Overview>&#xD;
+This is a docker image of Thunder downloader. After running, please see your binding code through the log pannel.&#xD;
+&#xD;
+&#x8FD9;&#x662F;&#x4E00;&#x4E2A;&#x8FC5;&#x96F7;&#x7684;Docker&#x955C;&#x50CF;&#x3002; &#x8FD0;&#x884C;&#x540E;&#x8BF7;&#x5728;log&#x9875;&#x9762;&#x67E5;&#x770B;&#x60A8;&#x7684;&#x914D;&#x5BF9;&#x7801;&#x3002;</Overview>
+  <Category/>
+  <WebUI>http://yuancheng.xunlei.com</WebUI>
+  <TemplateURL/>
+  <Icon>https://yuancheng.xunlei.com/img/tutor/xlly.png</Icon>
+  <ExtraParams>--restart always</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1629427915</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description>&#xD;
+This is a docker image of Thunder downloader. After running, please see your binding code through the log pannel.&#xD;
+&#xD;
+&#x8FD9;&#x662F;&#x4E00;&#x4E2A;&#x8FC5;&#x96F7;&#x7684;Docker&#x955C;&#x50CF;&#x3002; &#x8FD0;&#x884C;&#x540E;&#x8BF7;&#x5728;log&#x9875;&#x9762;&#x67E5;&#x770B;&#x60A8;&#x7684;&#x914D;&#x5BF9;&#x7801;&#x3002;</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish/>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/Downloads/TDDOWNLOAD</HostDir>
+      <ContainerDir>/xware/TDDOWNLOAD</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment/>
+  <Labels/>
+  <Config Name="host path" Target="/xware/TDDOWNLOAD" Default="" Mode="rw" Description="Container Path: /xware/TDDOWNLOAD" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/Downloads/TDDOWNLOAD</Config>
+</Container>

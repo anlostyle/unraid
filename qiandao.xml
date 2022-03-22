@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>qiandao</Name>
+  <Repository>asdaragon/qiandao</Repository>
+  <Registry/>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support/>
+  <Project/>
+  <Overview/>
+  <Category/>
+  <WebUI>http://[IP]:[PORT:3180]/</WebUI>
+  <TemplateURL/>
+  <Icon>https://upload.cc/i1/2022/03/02/LVqSRN.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1646228936</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description/>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>3180</HostPort>
+        <ContainerPort>80</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/qiandao/</HostDir>
+      <ContainerDir>/usr/src/app/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment/>
+  <Labels/>
+  <Config Name="web" Target="80" Default="80" Mode="tcp" Description="80" Type="Port" Display="always" Required="false" Mask="false">3180</Config>
+  <Config Name="config" Target="/usr/src/app/config" Default="" Mode="rw" Description="/usr/src/app/config" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/qiandao/</Config>
+</Container>

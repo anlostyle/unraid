@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>komga</Name>
+  <Repository>gotson/komga</Repository>
+  <Registry/>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support/>
+  <Project/>
+  <Overview/>
+  <Category/>
+  <WebUI>http://[IP]:[PORT:8085]</WebUI>
+  <TemplateURL/>
+  <Icon>https://mmbiz.qpic.cn/mmbiz_png/5xFLia3A3km7r4micVVIGZ1u4HFDRzhJicsxveTVwk3EbAse8GO370XU4xqCLsgy1mUKiaKd7qp0AaBa0tCjjZrZ5Q/640?wx_fmt=png&amp;amp;tp=webp&amp;amp;wxfrom=5&amp;amp;wx_lazy=1&amp;amp;wx_co=1</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1642309856</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description/>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8085</HostPort>
+        <ContainerPort>8080</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/hlink2/&#x6F2B;&#x753B;/</HostDir>
+      <ContainerDir>/comic</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/komga/config</HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/komga/tmp</HostDir>
+      <ContainerDir>/tmp</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/komga/data</HostDir>
+      <ContainerDir>/data</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment/>
+  <Labels/>
+  <Config Name="Host Path 1" Target="/comic" Default="" Mode="rw" Description="&#x5BB9;&#x5668; Path: /comic" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/hlink2/&#x6F2B;&#x753B;/</Config>
+  <Config Name="Host Port 1" Target="8080" Default="" Mode="tcp" Description="&#x5BB9;&#x5668; Port: 8080" Type="Port" Display="always" Required="false" Mask="false">8085</Config>
+  <Config Name="Host Path 2" Target="/config" Default="" Mode="rw" Description="&#x5BB9;&#x5668; Path: /config" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/komga/config</Config>
+  <Config Name="/tmp" Target="/tmp" Default="" Mode="rw" Description="&#x5BB9;&#x5668; Path: /tmp" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/komga/tmp</Config>
+  <Config Name="/data" Target="/data" Default="" Mode="rw" Description="&#x5BB9;&#x5668; Path: /data" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/komga/data</Config>
+</Container>

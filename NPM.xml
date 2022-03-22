@@ -1,0 +1,94 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>NPM</Name>
+  <Repository>jc21/nginx-proxy-manager</Repository>
+  <Registry>https://hub.docker.com/r/jc21/nginx-proxy-manager</Registry>
+  <Network>br0</Network>
+  <MyIP>192.168.2.100</MyIP>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/110245-support-nginx-proxy-manager-npm-official/</Support>
+  <Project>https://nginxproxymanager.com/</Project>
+  <Overview>Nginx Proxy Manager (NPM) allows adding proxy hosts through a password-protected multi-user WebUI. Add free Let's Encrypt SSL certificates to secure your web services. They are renewed by NPM automatically.&#xD;
+&#xD;
+Default login:&#xD;
+admin@example.com&#xD;
+&#xD;
+Password:&#xD;
+changeme</Overview>
+  <Category>Tools:Utilities Other: Network:Web Network:Proxy Network:Management Network:Other</Category>
+  <WebUI>http://[IP]:[PORT:81]</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/mgutt/unraid-docker-templates/main/mgutt/Nginx-Proxy-Manager-Official.xml</TemplateURL>
+  <Icon>https://nginxproxymanager.com/icon.png</Icon>
+  <ExtraParams>--memory=1G --no-healthcheck</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1640700635</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description>Nginx Proxy Manager (NPM) allows adding proxy hosts through a password-protected multi-user WebUI. Add free Let's Encrypt SSL certificates to secure your web services. They are renewed by NPM automatically.&#xD;
+&#xD;
+Default login:&#xD;
+admin@example.com&#xD;
+&#xD;
+Password:&#xD;
+changeme</Description>
+  <Networking>
+    <Mode>br0</Mode>
+    <Publish>
+      <Port>
+        <HostPort>81</HostPort>
+        <ContainerPort>81</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>80</HostPort>
+        <ContainerPort>80</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>44244</HostPort>
+        <ContainerPort>44244</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>3000</HostPort>
+        <ContainerPort>3000</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/cache/appdata/Nginx-Proxy-Manager/data</HostDir>
+      <ContainerDir>/data</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/cache/appdata/Nginx-Proxy-Manager/letsencrypt</HostDir>
+      <ContainerDir>/etc/letsencrypt</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/tmp/Nginx-Proxy-Manager-Official/var/log</HostDir>
+      <ContainerDir>/var/log</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>/data/database.sqlite</Value>
+      <Name>DB_SQLITE_FILE</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Labels/>
+  <Config Name="WebUI" Target="81" Default="" Mode="tcp" Description="Container Port: 81" Type="Port" Display="always" Required="false" Mask="false">81</Config>
+  <Config Name="HTTP Port" Target="80" Default="" Mode="tcp" Description="Container Port: 80" Type="Port" Display="always" Required="false" Mask="false">80</Config>
+  <Config Name="HTTPS Port" Target="44244" Default="" Mode="tcp" Description="Container Port: 443" Type="Port" Display="always" Required="false" Mask="false">44244</Config>
+  <Config Name="Data" Target="/data" Default="" Mode="rw" Description="Container Path: /data" Type="Path" Display="always" Required="false" Mask="false">/mnt/cache/appdata/Nginx-Proxy-Manager/data</Config>
+  <Config Name="Certificates" Target="/etc/letsencrypt" Default="" Mode="rw" Description="Container Path: /etc/letsencrypt" Type="Path" Display="always" Required="false" Mask="false">/mnt/cache/appdata/Nginx-Proxy-Manager/letsencrypt</Config>
+  <Config Name="Error Logs" Target="/var/log" Default="" Mode="rw" Description="Container Path: /var/log" Type="Path" Display="always" Required="false" Mask="false">/tmp/Nginx-Proxy-Manager-Official/var/log</Config>
+  <Config Name="Database" Target="DB_SQLITE_FILE" Default="" Mode="" Description="Container Variable: DB_SQLITE_FILE" Type="Variable" Display="always" Required="false" Mask="false">/data/database.sqlite</Config>
+  <Config Name="API Port" Target="3000" Default="" Mode="tcp" Description="Container Port: 3000" Type="Port" Display="advanced-hide" Required="false" Mask="false">3000</Config>
+</Container>
